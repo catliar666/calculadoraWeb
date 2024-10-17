@@ -107,3 +107,10 @@ document.addEventListener("DOMContentLoaded", function() {
         ).join("");
     }
 });
+
+document.addEventListener("click", function(event) {
+    const isClickInside = historialContainer.contains(event.target) || event.target.id === "historial";
+    if (!isClickInside && historialContainer.style.display === "block") {
+        historialContainer.style.display = "none";
+    }
+});
