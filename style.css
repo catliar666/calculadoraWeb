@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(imagenes/anime-hello-kitty-wallpaper-preview.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    background-color: #ff9aa2;
+    padding: 10px;
+    border-radius: 15px;
+    color: aliceblue;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-calculator {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.results-container {
+    background-color: #ff9aa2;
+    border-radius: 15px;
+    height: 100px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: flex-end; /* Alinea a la derecha */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#operacion-resultado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: aliceblue;
+}
+
+#resultado {
+    font-size: 2em;
+    color: aliceblue;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column; /* Coloca los conjuntos de botones en columnas */
+}
+
+.column {
+    display: flex; /* Usar flex para las columnas de botones */
+    justify-content: space-between; /* Espaciado entre los botones */
+    margin-bottom: 10px; /* Espacio entre las filas de botones */
+}
+
+button {
+    background-color: #ff9aa2;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 5px;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff6f61;
+}
+
+img {
+    width: 24px;
+    height: auto;
+}
+
+.letraRojo {
+    color: #333;
+    font-weight: bold;
+}
+
+#historialContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    color: #333;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .column {
+        grid-template-columns: repeat(4, 1fr); /* Ajustar a 2 columnas para pantallas pequeñas */
+    }
+
+    .results-container {
+        height: 80px; /* Ajustar la altura en pantallas más pequeñas */
+        font-size: 1.2rem; /* Reducir el tamaño de fuente */
+    }
+
+    button {
+        padding: 15px; /* Reducir el tamaño de los botones */
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .column {
+        grid-template-columns: repeat(4, 1fr); /* Ajustar a 1 columna para pantallas muy pequeñas */
+        gap: 5px;
+    }
+
+    .container-calculator {
+        padding: 15px; /* Reducir el padding */
+    }
+
+    .results-container {
+        height: 60px;
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 10px; /* Reducir el tamaño de los botones */
+        font-size: 1em;
+    }
+
+    header {
+        font-size: 1.2rem; /* Reducir el tamaño de la cabecera en móviles */
+    }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Calculadora cute</title>
+</head>
+<body>
+    <header>
+        <h1>Calculadora de María Ordóñez</h1>
+    </header>
+    <main>
+        <div class="container-calculator">
+            <div class="results-container">
+                <p id="operacion-resultado"></p>
+                <p id="resultado"></p>
+            </div>
+            
+            <div class="botones">
+                <div class="column">
+                    <button class="historial" id="historial">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAdZJREFUSEuFVVu2wyAIHHaWrKzJypK7Mq8gKiC2/WmPldfMMBLihwAUe2gPCISCokfy9fM+5/I5pMAMXjKM6kuYBkkTeouPfIFkpBjQgr+O4f4etWYihWIWOyoaHwD8bT9XrXRzNhtrMW4TLB2NwyVxgqZNkFK6HOp8BwiPIfwF6AwKeEA4mGmdwDTcYNxxcBDwNIXQC5QzzBmaomJ4MjkJtNEI4834vgDOeSe5PbkuSv5Vu7pHQ0nIAdADFEke1UIoRbUf4JCUUoMAHmnI3ZPc1HLV/6+6DqKQoIpRICH8U+/zBKquFh0LPCrHsxL4+q3WLhs3FOVYmoyf2ZwrMOrIGsqYlsoFa9dXb1QKdO4UrpGlE2u3Ykpz4uHqmjL8U/gjlLcQTmk0GJYN9iTbsrZ5T1EQSM5Bt7rBwc4wEwV2FIyFdKDmNvIl5uBeOVg8ys7S8eczXkxGwEOU228UWaK7dqS20ZbTmu03u+4Oqlax7ATzaA2Rk/MWS/dRRfOks+CdTRRl3wZRjRjigI43/3Xvxw4W4z9sG/oO2EfGDa6Kaz2vL9pednbV3J5wp+pXf/p73J3S39t1Bpct9uuddcUSkvdPYOIeeWEdY/cemKDNi5HNkFz9B3X74x9mLeBkAAAAAElFTkSuQmCC"/>
+                    </button>
+    
+                    <button class="borrar" id="borrarUltimo">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAXJJREFUSEuNldEBgzAIRI/JqpPZbuZmqSHEQACjX1YRcvC4EupFAArfLS8XKg/iFMSp72sE2XD9i+910uxwKkYK5DLiAvYpodyFR1e6gje6F6ceymrSXoxAcVveqYnba8fYZpApsLEbgM8V/TOP3ZD9/HxJT1RNfgC0AWUHcL7DLaVIRLXDbAQcBahFauJ9hbVuu8E0OBWfnICtEE4U2vXCZFgbih52TNqiTv7c/BB3pUDwamEqOZ3S94kHtx0WFuHWFGD5hO3C+OAiAV3MeMAnAdQ3XHtD2wO9/+1t4kyZhajjTtX9kEcOCeXWUfuht9SQ5vnwXmRnJO85bxyrZxag4j9KedKilbUEM3U6zKIF7ji4MUV6noCjqcS0yZl5jXZxW76F8GvAhYCoNKmC1J4qvrfZafiyBq+swlnt2njnVhtB0d+hwqG3JRhm7FGtjfdlXXDa2Hh7ZSMDQIxVrHEIjPbNRw+YDsl2e53ep+lecP8BIk2xKDbf4bEAAAAASUVORK5CYII="/>
+                    </button>
+                </div>
+    
+                <div class="column">
+                    <button class="general simbolos" value="C">
+                        <span class="letraRojo" id="borrar">C</span>
+                    </button>
+                    <button class="general simbolos" value='()'>
+                        <span class="letra" id="parentesis">()</span>
+                    </button>
+                    <button class="general simbolos" value="%">
+                        <span class="letra" id="porcentaje">%</span>
+                    </button>
+                    <button class="general simbolos" value="/">
+                        <span class="letra" id="division">÷</span>
+                    </button>
+                </div>
+    
+                <div class="column">
+                    <button class="general numeros" value="7">
+                        <span class="numero" id="siete">7</span>
+                    </button>
+                    <button class="general numeros" value="8">
+                        <span class="numero" id="ocho">8</span>
+                    </button>
+                    <button class="general numeros" value="9">
+                        <span class="numero" id="nueve">9</span>
+                    </button>
+                    <button class="general simbolos" value="*">
+                        <span class="letra" id="multiplicar">x</span>
+                    </button>
+                </div>
+    
+                <div class="column">
+                    <button class="general numeros" value="4">
+                        <span class="numero" id="cuatro">4</span>
+                    </button>
+                    <button class="general numeros" value="5">
+                        <span class="numero" id="cinco">5</span>
+                    </button>
+                    <button class="general numeros" value="6">
+                        <span class="numero" id="seis">6</span>
+                    </button>
+                    <button class="general simbolos" value="-">
+                        <span class="letra" id="restar">-</span>
+                    </button>
+                </div>
+    
+                <div class="column">
+                    <button class="general numeros" value="1">
+                        <span class="numero" id="uno">1</span>
+                    </button>
+                    <button class="general numeros" value="2">
+                        <span class="numero" id="dos">2</span>
+                    </button>
+                    <button class="general numeros" value="3">
+                        <span class="numero" id="tres">3</span>
+                    </button>
+                    <button class="general simbolos" value="+">
+                        <span class="letra" id="sumar">+</span>
+                    </button>
+                </div>
+    
+                <div class="column">
+                    <button class="general simbolos" value="+/-">
+                        <span class="letra" id="numNegativo">+/-</span>
+                    </button>
+                    <button class="general numeros" value="0">
+                        <span class="numero" id="cero">0</span>
+                    </button>
+                    <button class="general simbolos" value=".">
+                        <span class="letra" id="coma">,</span>
+                    </button>
+                    <button class="general simbolos" value="=">
+                        <span class="letraRojo" id="igual">=</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <div id="historialContainer">
+        </div>
+    </main>
+<script src="calculadora1.js"></script>    
+</body>
+</html>
